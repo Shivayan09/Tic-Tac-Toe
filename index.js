@@ -95,7 +95,7 @@ const enableBoxes = () => {
 }
 
 const showWinner = (won) => {
-    winner.innerText = `Winner is ${won}!`;
+    winner.innerText = `${won} won!`;
     winner.classList.remove("hide");
     disableBoxes();
 }
