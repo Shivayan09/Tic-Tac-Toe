@@ -1,14 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: black;
+    font-family: Arial, sans-serif;
 }
 .mode {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 10px;
 }
 .heading {
     height: 100px;
@@ -20,6 +23,7 @@ body {
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 .row {
     display: flex;
@@ -27,11 +31,10 @@ body {
     align-items: center;
 }
 .box {
-    margin: 5px 5px;
+    margin: 5px;
     height: 80px;
     width: 80px;
     border: 2px solid white;
-    border-radius: 1rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -42,14 +45,9 @@ body {
     text-align: center;
 }
 .box:hover {
-    background-color: rgb(255,255,255,0.1);
-    transform: scale(1.2rem);
-    height: 85px;
-    width: 85px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
     transition: 0.2s;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
 }
 .scoreboard {
     margin-top: 60px;
@@ -58,9 +56,6 @@ body {
     align-items: center;
 }
 .score-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 12px 25px;
@@ -71,40 +66,35 @@ body {
     cursor: pointer;
 }
 .score-text:hover {
-    padding: 13px 26px;
     transition: 0.2s;
 }
 .winner-text {
-    border-radius: 1rem;
-    margin-right: 440px;
     font-size: 2rem;
-    padding: 10px 10px;
+    padding: 10px;
     color: white;
+    text-align: center;
 }
 .hide {
     display: none;
 }
 .top-bar {
     height: 90px;
-    background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 .winner {
     margin-top: 40px;
     text-align: center;
 }
 #new-btn {
-    padding: 12px 24px;
     font-size: 1rem;
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     cursor: pointer;
-    margin-right: 700px;
 }
 #new-btn:hover {
-    padding: 15px 27px;
     transition: 0.2s;
 }
 .mode-text {
@@ -117,15 +107,37 @@ body {
     cursor: pointer;
 }
 .mode-text:hover {
-    padding: 15px 27px;
     transition: 0.2s;
 }
-.winner-text {
-    margin-left: 450px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 1rem;
-    background-color: rgb(255,255,255,0.5);
+.outer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .box {
+        height: 60px;
+        width: 60px;
+    }
+    .heading-text {
+        font-size: 1.5rem;
+    }
+    .score-text, .mode-text {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+@media (max-width: 480px) {
+    .box {
+        height: 50px;
+        width: 50px;
+    }
+    .heading-text {
+        font-size: 1.2rem;
+    }
+    .score-text, .mode-text {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
 }
